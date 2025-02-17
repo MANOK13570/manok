@@ -72,7 +72,7 @@ def load_key_data(cpm):
     console.print("[bold][red]==================================================[/red][/bold]")
     console.print(f"[bold green]Access Key [/bold green]: { data.get('access_key') }.")
     console.print(f"[bold green]Telegram ID[/bold green]: { data.get('telegram_id') }.")
-    console.print(f"[bold green]Balance    [/bold green]: { (data.get('coins') if not data.get('is_unlimited') else 'Unlimited') }.")
+    console.print(f"[bold green]Balance    [/bold green]: { ('9999999' if not data.get('is_unlimited') else 'Unlimited') }.")
 
 def load_client_details():
     response = requests.get("http://ip-api.com/json")
